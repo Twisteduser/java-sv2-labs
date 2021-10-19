@@ -2,19 +2,19 @@ package localvariables;
 
 public class Distance {
 
-    public Distance(double distance, boolean accuracy){
-        this.distanceMeter = distanceMeter;
-        this.accuracy = accuracy;
+    public Distance(double distanceInKm, boolean exact){
+        this.distanceInKm = distanceInKm;
+        this.exact = exact;
     }
 
-    public void setDistance(double distance) {
-        this.distanceMeter = distance;
+    public void setDistanceInKm(double distanceInKm) {
+        this.distanceInKm = distanceInKm;
     }
 
-    public void setAccuracy(boolean accuracy) {
-        this.accuracy = accuracy;
+    public void setExact(boolean exact) {
+        this.exact = exact;
     }
 
-    public double distanceMeter;
-    public boolean accuracy;
+    public double distanceInKm;
+    public boolean exact;
 }
