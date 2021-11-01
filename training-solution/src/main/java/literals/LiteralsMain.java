@@ -19,7 +19,6 @@ public class LiteralsMain {
 
         System.out.println(Integer.toBinaryString(20));
         System.out.println(Integer.toBinaryString(40));
-        
 
     }
 }
