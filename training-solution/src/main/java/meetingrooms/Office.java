@@ -1,42 +1,66 @@
 package meetingrooms;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Office {
-    private String name;
-    private int length;
-    private int width;
 
-    public Office(String name, int length, int width) {
-        this.name = name;
-        this.length = length;
-        this.width = width;
+    private List<MeetingRoom> meetingRooms = new ArrayList<>();
+
+    public void addMeetingRoom (MeetingRoom meetingRoom){
+        meetingRooms.add(meetingRoom);
     }
 
-    public String getName() {
-        return name;
+    public void printNames(){
+        for (MeetingRoom meetingRoom: meetingRooms){
+            System.out.print(meetingRoom.getName() + ", ");
+        }
+        System.out.println();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void printNamesReverse(){
+        for (int i = meetingRooms.size() -1; i>=0; i--){
+            System.out.print(meetingRooms.get(i).getName() + ", ");
+        }
+        System.out.println();
     }
 
-    public int getLength() {
-        return length;
+    public void printEvenNames(){
+        for (int i = 0; i<meetingRooms.size();i++){
+            if (i%2 != 0){
+                System.out.print(meetingRooms.get(i).getName() + ", ");
+            }
+        }
+        System.out.println();
     }
 
-    public void setLength(int length) {
-        this.length = length;
+    public void printAreas(){
+        for (MeetingRoom meetingRoom: meetingRooms){
+            System.out.println(meetingRoom.toString());
+        }
     }
 
-    public int getWidth() {
-        return width;
+    public void printMeetingRoomsWithName (String name){
+        for (MeetingRoom meetingRoom: meetingRooms){
+            if (name.equals(meetingRoom.getName())){
+                System.out.println(meetingRoom.toString());
+            }
+        }
     }
 
-    public void setWidth(int width) {
-        this.width = width;
+    public void printMeetingRoomsContains (String part){
+        for (MeetingRoom meetingRoom: meetingRooms){
+            if (meetingRoom.getName().toLowerCase().contains(part)){
+                System.out.println(meetingRoom.toString());
+            }
+        }
     }
 
-    public int getArea(){
-        int area = length *width;
-        return area;
+    public void printAreasLargerThan (int area){
+        for (MeetingRoom meetingRoom: meetingRooms){
+            if (meetingRoom.getArea() > area){
+                System.out.println(meetingRoom.toString());
+            }
+        }
     }
 }
