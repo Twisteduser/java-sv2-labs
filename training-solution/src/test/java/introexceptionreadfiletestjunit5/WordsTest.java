@@ -1,4 +1,4 @@
-package introexceptionreadfiletestjunit4;
+package introexceptionreadfiletestjunit5;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class WordsTest {
+
     private Words words = new Words();
 
     @Test
