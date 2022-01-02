@@ -13,6 +13,7 @@ public class Zoo {
     public List<Animal> getAnimals() {
         return animals;
     }
+
     public void addAnimal(Animal animal){
         animals.add(animal);
     }
