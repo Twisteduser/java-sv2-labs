@@ -37,10 +37,10 @@ public class Building {
                 '}';
     }
 
-    @Override
-    public int compareTo(Building other) {
-        return Integer.valueOf(levels).compareTo(other.levels);
-    }
+//    @Override
+//    public int compareTo(Building other) {
+//        return Integer.valueOf(levels).compareTo(other.levels);
+//    }
 
     @Override
     public boolean equals(Object o) {
